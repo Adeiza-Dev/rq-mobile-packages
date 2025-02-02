@@ -1,0 +1,1 @@
+class InsufficientUTXOsFetched extends Error {}

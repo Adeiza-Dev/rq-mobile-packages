@@ -1,0 +1,38 @@
+name: hd_wallet
+description: Package for wallet management
+version: 0.4.2
+publish_to: none # Remove this line if you wish to publish to pub.dev
+
+environment:
+  sdk: ">=3.1.2 <4.0.0"
+
+dependencies:
+  bip32: 2.0.0
+  bitcoin_base: 3.0.1
+  blake2b: 0.2.2
+  coinslib: 3.1.8
+  conduit_password_hash: 4.4.0
+  crypto: 3.0.3
+  decimal: 2.3.3
+  ethereum_addresses: 1.0.2
+  hex: 0.2.0
+  http: 1.2.2
+  kadena_dart_sdk: 2.3.2
+  pinenacl: 0.5.1
+  pointycastle: 3.9.1
+  protobuf: 3.1.0
+  fixnum: 1.1.0
+  slip_0010_ed25519: 3.2.0
+  web3dart: 2.7.3
+  get_it: 7.6.4
+  solana: 0.31.0
+  rq_logger:
+    path: ../rq_logger
+  rq_exception:
+    path: ../rq_exception
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: 2.0.3

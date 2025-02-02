@@ -1,0 +1,563 @@
+{
+  "configVersion": 2,
+  "packages": [
+    {
+      "name": "_fe_analyzer_shared",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/_fe_analyzer_shared-67.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "analyzer",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/analyzer-6.4.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "args",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/args-2.4.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "async",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/async-2.11.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "bip32",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/bip32-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "bip39",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/bip39-1.0.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "bitcoin_base",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/bitcoin_base-3.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
+      "name": "blake2b",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/blake2b-0.2.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "blockchain_utils",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/blockchain_utils-1.6.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
+      "name": "boolean_selector",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/boolean_selector-2.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "borsh_annotation",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/borsh_annotation-0.3.1+5",
+      "packageUri": "lib/",
+      "languageVersion": "2.13"
+    },
+    {
+      "name": "bs58check",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/bs58check-1.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "build",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/build-2.4.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "build_config",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/build_config-1.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "characters",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/characters-1.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "checked_yaml",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/checked_yaml-2.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "clock",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/clock-1.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "coinslib",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/coinslib-3.1.8",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "collection",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/collection-1.18.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "conduit_password_hash",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/conduit_password_hash-4.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "convert",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/convert-3.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "crypto",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/crypto-3.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "cryptography",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/cryptography-2.7.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+    },
+    {
+      "name": "dart_style",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/dart_style-2.3.6",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "decimal",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/decimal-2.3.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "dio",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/dio-5.3.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
+      "name": "ed25519_hd_key",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/ed25519_hd_key-2.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "eip1559",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/eip1559-0.6.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "eip55",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/eip55-1.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "ethereum_addresses",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/ethereum_addresses-1.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "fake_async",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/fake_async-1.3.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "ffi",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/ffi-2.1.3",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "file",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/file-7.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "fixnum",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/fixnum-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "flutter",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/Documents/Developer/flutter/packages/flutter",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "flutter_lints",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/flutter_lints-2.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "flutter_test",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/Documents/Developer/flutter/packages/flutter_test",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "freezed_annotation",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/freezed_annotation-2.4.4",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "get_it",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/get_it-7.6.4",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "glob",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/glob-2.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "hd_wallet",
+      "rootUri": "../../hd_wallet",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+    },
+    {
+      "name": "hex",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/hex-0.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "http",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/http-1.2.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "http_parser",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/http_parser-4.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "js",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/js-0.6.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "json_annotation",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/json_annotation-4.8.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "json_rpc_2",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/json_rpc_2-3.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "json_serializable",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/json_serializable-6.7.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "kadena_dart_sdk",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/kadena_dart_sdk-2.3.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "leak_tracker",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/leak_tracker-10.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "leak_tracker_flutter_testing",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/leak_tracker_flutter_testing-3.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "leak_tracker_testing",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/leak_tracker_testing-3.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "lints",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/lints-2.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "logger",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/logger-2.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "logging",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/logging-1.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "matcher",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/matcher-0.12.16+1",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "material_color_utilities",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/material_color_utilities-0.8.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "meta",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/meta-1.12.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "package_config",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/package_config-2.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/path-1.9.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "pinenacl",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/pinenacl-0.5.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "pointycastle",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/pointycastle-3.9.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "protobuf",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/protobuf-3.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "pub_semver",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/pub_semver-2.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "pubspec_parse",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/pubspec_parse-1.2.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "rational",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/rational-2.2.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "rq_exception",
+      "rootUri": "../../rq_exception",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "sec",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/sec-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "sky_engine",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/Documents/Developer/flutter/bin/cache/pkg/sky_engine",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "slip_0010_ed25519",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/slip_0010_ed25519-3.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "solana",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/solana-0.31.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "source_gen",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/source_gen-1.5.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "source_helper",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/source_helper-1.3.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "source_span",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/source_span-1.10.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "sprintf",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/sprintf-7.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "stack_trace",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/stack_trace-1.11.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "stream_channel",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/stream_channel-2.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "stream_transform",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/stream_transform-2.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "string_scanner",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/string_scanner-1.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "term_glyph",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/term_glyph-1.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "test_api",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/test_api-0.7.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "typed_data",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/typed_data-1.3.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "uuid",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/uuid-4.5.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "vector_math",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/vector_math-2.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "vm_service",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/vm_service-14.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "wallet",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/wallet-0.0.13",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "watcher",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/watcher-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "web",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/web-0.5.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "web3dart",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/web3dart-2.7.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "web_socket_channel",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/web_socket_channel-2.4.5",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "yaml",
+      "rootUri": "file:///Users/emmanuelozi-yusuf/.pub-cache/hosted/pub.dev/yaml-3.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "rq_logger",
+      "rootUri": "../",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    }
+  ],
+  "generated": "2025-01-31T22:17:40.002508Z",
+  "generator": "pub",
+  "generatorVersion": "3.4.0",
+  "flutterRoot": "file:///Users/emmanuelozi-yusuf/Documents/Developer/flutter",
+  "flutterVersion": "3.22.0",
+  "pubCache": "file:///Users/emmanuelozi-yusuf/.pub-cache"
+}
