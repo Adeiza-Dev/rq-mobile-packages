@@ -1,4 +1,4 @@
-package com.gearscrafter.scan_snap
+package com.chavesgu.scan
 
 import android.annotation.SuppressLint
 import android.graphics.Bitmap

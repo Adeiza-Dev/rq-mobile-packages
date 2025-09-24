@@ -1,4 +1,4 @@
-package com.gearscrafter.scan_snap
+package com.chavesgu.scan
 
 import android.animation.ValueAnimator
 import android.content.Context

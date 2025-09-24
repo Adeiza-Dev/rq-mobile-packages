@@ -5,7 +5,7 @@ plugins {
 
 
 android {
-    namespace 'com.gearscrafter.scan_snap'
+    namespace 'com.chavesgu.scan'
     compileSdkVersion 35
 
     defaultConfig {
