@@ -1,9 +1,9 @@
-name: scan
+name: scan_snap
 description: A Flutter QR/barcode scanner widget with camera view and image parsing.
 version: 0.0.1
-homepage: https://github.com/gearscrafter/scan
-repository: https://github.com/gearscrafter/scan
-issue_tracker: https://github.com/gearscrafter/scan/issues
+homepage: https://github.com/gearscrafter/scan_snap
+repository: https://github.com/gearscrafter/scan_snap
+issue_tracker: https://github.com/gearscrafter/scan_snap/issues
 topics:
   - qr
   - barcode
@@ -27,7 +27,7 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.gearscrafter.scan
+        package: com.gearscrafter.scan_snap
         pluginClass: ScanPlugin
       ios:
         pluginClass: ScanPlugin

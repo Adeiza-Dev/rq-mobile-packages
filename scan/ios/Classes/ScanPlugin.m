@@ -1,8 +1,8 @@
 #import "ScanPlugin.h"
-#if __has_include(<scan/scan-Swift.h>)
-#import <scan/scan-Swift.h>
+#if __has_include(<scan_snap/scan_snap-Swift.h>)
+#import <scan_snap/scan_snap-Swift.h>
 #else
-#import "scan-Swift.h"
+#import "scan_snap-Swift.h"
 #endif
 
 @implementation ScanPlugin

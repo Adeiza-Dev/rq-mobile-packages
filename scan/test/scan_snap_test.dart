@@ -2,13 +2,13 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:scan/scan.dart';
+import 'package:scan_snap/scan_snap.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
   group('Scan class (static methods)', () {
-    const MethodChannel channel = MethodChannel('scan/scan');
+    const MethodChannel channel = MethodChannel('scan_snap/scan');
 
     final List<MethodCall> log = <MethodCall>[];
 
@@ -49,7 +49,7 @@ void main() {
   });
 
   group('ScanView and ScanController', () {
-    const MethodChannel viewChannel = MethodChannel('scan/scan/method_0');
+    const MethodChannel viewChannel = MethodChannel('scan_snap/scan/method_0');
     final List<MethodCall> log = <MethodCall>[];
 
     setUp(() {

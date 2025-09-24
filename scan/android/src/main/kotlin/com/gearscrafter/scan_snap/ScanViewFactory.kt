@@ -1,4 +1,4 @@
-package com.gearscrafter.scan
+package com.gearscrafter.scan_snap
 
 import android.content.Context
 import android.util.Log
@@ -36,14 +36,14 @@ class ScanViewFactory(
      * @return The platform view to be embedded into Flutter's widget tree.
      */
     override fun create(context: Context, viewId: Int, args: Any?): PlatformView {
-        Log.d("scan", "📦 Reached create() method")
+        Log.d("scan_snap", "📦 Reached create() method")
 
         // Safely cast creation arguments to a Map<String, Any>, if possible
         val params = if (args is Map<*, *>) {
             @Suppress("UNCHECKED_CAST")
             args as? Map<String, Any>
         } else {
-            Log.w("scan", "⚠️ 'args' is not a Map<String, Any>: $args")
+            Log.w("scan_snap", "⚠️ 'args' is not a Map<String, Any>: $args")
             null
         }
 

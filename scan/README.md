@@ -1,6 +1,7 @@
-# scan
+# scan_snap
 
-[![pub](https://img.shields.io/badge/pub-0.0.1-blue)](https://pub.dev/packages/scan) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![pub](https://img.shields.io/badge/pub-0.0.1-blue)](https://pub.dev/packages/scan_snap) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 
 A simple, customizable, and high-performance QR and barcode scanner widget for Flutter. Easily decode codes from the live camera stream or from image files.
 
@@ -26,13 +27,13 @@ Add the package to your `pubspec.yaml` dependencies:
 
 ```yaml
 dependencies:
-  scan: ^0.0.1 # Replace with the latest version
+  scan_snap: ^0.0.1 # Replace with the latest version
 ```
 
 Then, import the package in your Dart code:
 
 ```dart
-import 'package:scan/scan.dart';
+import 'package:scan_snap/scan.dart';
 ```
 
 ### 2. Platform Setup
@@ -53,6 +54,7 @@ Add the following keys to your `ios/Runner/Info.plist` file:
 <key>io.flutter.embedded_views_preview</key>
 <true/>
 ```
+
 
 Also, ensure your `minSdkVersion` in `android/app/build.gradle` is set to at least 23.
 
@@ -77,7 +79,7 @@ The best way to use the scanner is within a `StatefulWidget`. Here is a complete
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:scan/scan.dart';
+import 'package:scan_snap/scan.dart';
 
 class ScanScreen extends StatefulWidget {
   const ScanScreen({super.key});
@@ -137,7 +139,7 @@ Use the static `Scan.parse()` method to decode a QR/barcode from a saved image o
 
 ```dart
 import 'package:image_picker/image_picker.dart';
-import 'package:scan/scan.dart';
+import 'package:scan_snap/scan.dart';
 
 // ...
 
@@ -156,7 +158,6 @@ Future<void> scanFromGallery() async {
 ```
 
 ---
-
 ### 🔐 Proguard Rules (Android)
 
 If you use Proguard/R8 to shrink and obfuscate your release app, add the following rules to your `android/app/proguard-rules.pro` file to prevent breaking ZXing and CameraX functionality.
@@ -178,7 +179,7 @@ If you use Proguard/R8 to shrink and obfuscate your release app, add the followi
 
 ### 🙏 Acknowledgements
 
-This plugin is based on the  work of the original `scan` plugin created by [chavesgu](https://github.com/chavesgu).
+This plugin is based on the  work of the original `scan` plugin created by [chavesgu](https://github.com/chavesgu). 
 
 ### 📄 License
 
