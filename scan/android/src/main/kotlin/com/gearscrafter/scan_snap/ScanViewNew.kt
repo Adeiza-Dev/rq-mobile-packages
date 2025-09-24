@@ -1,4 +1,4 @@
-package com.chavesgu.scan
+package com.gearscrafter.scan
 
 import android.content.Context
 import android.os.Build

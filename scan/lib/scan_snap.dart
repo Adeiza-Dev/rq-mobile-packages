@@ -9,7 +9,7 @@ import 'package:flutter/rendering.dart';
 /// Provides static methods to interact with the native platform.
 /// Used for retrieving platform version and decoding images via native code.
 class Scan {
-  static const MethodChannel _channel = MethodChannel('chavesgu/scan');
+  static const MethodChannel _channel = MethodChannel('scan/scan');
 
   /// Returns the platform version from the native side (e.g. "Android 13")
   static Future<String> get platformVersion async {
@@ -29,14 +29,13 @@ typedef CaptureCallback = void Function(String data);
 
 class ScanView extends StatefulWidget {
   const ScanView({
-    Key? key,
+    super.key,
     this.controller,
     this.onCapture,
     this.scanLineColor = Colors.green,
     this.scanAreaScale = 0.7,
   })  : assert(scanAreaScale <= 1.0, 'scanAreaScale must <= 1.0'),
-        assert(scanAreaScale > 0.0, 'scanAreaScale must > 0.0'),
-        super(key: key);
+        assert(scanAreaScale > 0.0, 'scanAreaScale must > 0.0');
 
   final ScanController? controller;
   final CaptureCallback? onCapture;
@@ -77,7 +76,7 @@ class _ScanViewState extends State<ScanView> {
   Widget build(BuildContext context) {
     if (Platform.isIOS) {
       return UiKitView(
-        viewType: 'scan_snap/scan_view',
+        viewType: 'scan/scan_view',
         creationParamsCodec: const StandardMessageCodec(),
         creationParams: _creationParams,
         onPlatformViewCreated: _onPlatformViewCreated,
@@ -86,7 +85,7 @@ class _ScanViewState extends State<ScanView> {
       return Stack(
         children: [
           PlatformViewLink(
-            viewType: 'chavesgu/scan_view',
+            viewType: 'scan/scan_view',
             surfaceFactory: (context, controller) {
               return IgnorePointer(
                 ignoring: !_allowGestures,
@@ -101,7 +100,7 @@ class _ScanViewState extends State<ScanView> {
             onCreatePlatformView: (params) {
               return PlatformViewsService.initExpensiveAndroidView(
                 id: params.id,
-                viewType: 'chavesgu/scan_view',
+                viewType: 'scan/scan_view',
                 layoutDirection: TextDirection.ltr,
                 creationParams: _creationParams,
                 creationParamsCodec: const StandardMessageCodec(),
@@ -127,17 +126,17 @@ class _ScanViewState extends State<ScanView> {
   Map<String, dynamic> get _creationParams {
     final color = widget.scanLineColor;
     return {
-      'r': color.r,
-      'g': color.g,
-      'b': color.b,
-      'a': color.a,
-      'scale': widget.scanAreaScale,
+      "r": color.r,
+      "g": color.g,
+      "b": color.b,
+      "a": color.a,
+      "scale": widget.scanAreaScale,
     };
   }
 
   /// Called when the platform view is ready. Initializes the communication channel.
   void _onPlatformViewCreated(int id) {
-    final channel = MethodChannel('scan_snap/scan/method_$id');
+    final channel = MethodChannel('scan/scan/method_$id');
     widget.controller?._initialize(channel, widget.onCapture);
   }
 }
@@ -177,20 +176,20 @@ class ScanController {
   }
 
   /// Resume camera scanning
-  void resume() => _channel?.invokeMethod('resume');
+  void resume() => _channel?.invokeMethod("resume");
 
   /// Pause camera scanning
-  void pause() => _channel?.invokeMethod('pause');
+  void pause() => _channel?.invokeMethod("pause");
 
   /// Toggle the flashlight on/off
-  void toggleTorchMode() => _channel?.invokeMethod('toggleTorchMode');
+  void toggleTorchMode() => _channel?.invokeMethod("toggleTorchMode");
 
   /// Safely shutdown the camera
   Future<void> shutdown() async {
     try {
-      await _channel?.invokeMethod('shutdown');
+      await _channel?.invokeMethod("shutdown");
     } catch (e) {
-      print('Error during controlled camera shutdown: $e');
+      print("Error during controlled camera shutdown: $e");
     }
   }
 }

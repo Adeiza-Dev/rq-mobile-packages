@@ -4,24 +4,39 @@ import Vision
 
 public class SwiftScanPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
-    let channel = FlutterMethodChannel(name: "chavesgu/scan", binaryMessenger: registrar.messenger())
+    let channel = FlutterMethodChannel(name: "scan/scan", binaryMessenger: registrar.messenger())
     let instance = SwiftScanPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
     
-    registrar.register(ScanViewFactory(registrar: registrar), withId: "chavesgu/scan_view");
+    registrar.register(ScanViewFactory(registrar: registrar), withId: "scan/scan_view");
   }
 
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
     if call.method=="getPlatformVersion" {
       result("iOS " + UIDevice.current.systemVersion)
-    } else if call.method=="parse" {
-      let path = call.arguments as! String;
-      if let features = self.detectQRCode(UIImage.init(contentsOfFile: path)), !features.isEmpty {
-        let data = features.first as! CIQRCodeFeature
-        result(data.messageString);
-      } else {
-        self.detectBarCode(UIImage.init(contentsOfFile: path), result: result)
-      }
+    }else if call.method == "parse" {
+        guard let args = call.arguments as? [String: Any],
+              let path = args["path"] as? String else {
+            result(FlutterError(code: "INVALID_ARGUMENTS",
+                                message: "'path' argument is required and must be a String.",
+                                details: nil))
+            return
+        }
+
+        guard let image = UIImage(contentsOfFile: path) else {
+            result(FlutterError(code: "IMAGE_LOAD_FAILED",
+                                message: "Failed to load image from the provided path.",
+                                details: path))
+            return
+        }
+        if let features = self.detectQRCode(image), !features.isEmpty {
+            if let qrFeature = features.first as? CIQRCodeFeature, let message = qrFeature.messageString {
+                result(message)
+                return 
+            }
+        }
+
+        self.detectBarCode(image, result: result)
     }
   }
   
