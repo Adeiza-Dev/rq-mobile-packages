@@ -9,7 +9,7 @@ import 'package:flutter/rendering.dart';
 /// Provides static methods to interact with the native platform.
 /// Used for retrieving platform version and decoding images via native code.
 class Scan {
-  static const MethodChannel _channel = MethodChannel('scan_snap/scan');
+  static const MethodChannel _channel = MethodChannel('chavesgu/scan');
 
   /// Returns the platform version from the native side (e.g. "Android 13")
   static Future<String> get platformVersion async {
@@ -86,7 +86,7 @@ class _ScanViewState extends State<ScanView> {
       return Stack(
         children: [
           PlatformViewLink(
-            viewType: 'scan_snap/scan_view',
+            viewType: 'chavesgu/scan_view',
             surfaceFactory: (context, controller) {
               return IgnorePointer(
                 ignoring: !_allowGestures,
@@ -101,7 +101,7 @@ class _ScanViewState extends State<ScanView> {
             onCreatePlatformView: (params) {
               return PlatformViewsService.initExpensiveAndroidView(
                 id: params.id,
-                viewType: 'scan_snap/scan_view',
+                viewType: 'chavesgu/scan_view',
                 layoutDirection: TextDirection.ltr,
                 creationParams: _creationParams,
                 creationParamsCodec: const StandardMessageCodec(),
