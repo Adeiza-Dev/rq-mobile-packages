@@ -17,11 +17,14 @@ import io.flutter.view.TextureRegistry;
 /**
  * Platform implementation of the camera_plugin.
  *
- * <p>Instantiate this in an add to app scenario to gracefully handle activity and context changes.
+ * <p>
+ * Instantiate this in an add to app scenario to gracefully handle activity and
+ * context changes.
  * See {@code io.flutter.plugins.camera.MainActivity} for an example.
  *
- * <p>Call {@link #registerWith(io.flutter.plugin.common.PluginRegistry.Registrar)} to register an
- * implementation of this that uses the stable {@code io.flutter.plugin.common} package.
+ * <p>
+ * This plugin uses the Flutter v2 embedding API and implements
+ * {@link FlutterPlugin}.
  */
 public final class CameraPlugin implements FlutterPlugin, ActivityAware {
 
@@ -30,28 +33,13 @@ public final class CameraPlugin implements FlutterPlugin, ActivityAware {
   private @Nullable MethodCallHandlerImpl methodCallHandler;
 
   /**
-   * Initialize this within the {@code #configureFlutterEngine} of a Flutter activity or fragment.
+   * Initialize this within the {@code #configureFlutterEngine} of a Flutter
+   * activity or fragment.
    *
-   * <p>See {@code io.flutter.plugins.camera.MainActivity} for an example.
+   * <p>
+   * See {@code io.flutter.plugins.camera.MainActivity} for an example.
    */
-  public CameraPlugin() {}
-
-  /**
-   * Registers a plugin implementation that uses the stable {@code io.flutter.plugin.common}
-   * package.
-   *
-   * <p>Calling this automatically initializes the plugin. However plugins initialized this way
-   * won't react to changes in activity or context, unlike {@link CameraPlugin}.
-   */
-  @SuppressWarnings("deprecation")
-  public static void registerWith(
-      @NonNull io.flutter.plugin.common.PluginRegistry.Registrar registrar) {
-    CameraPlugin plugin = new CameraPlugin();
-    plugin.maybeStartListening(
-        registrar.activity(),
-        registrar.messenger(),
-        registrar::addRequestPermissionsResultListener,
-        registrar.view());
+  public CameraPlugin() {
   }
 
   @Override
@@ -97,8 +85,7 @@ public final class CameraPlugin implements FlutterPlugin, ActivityAware {
       BinaryMessenger messenger,
       PermissionsRegistry permissionsRegistry,
       TextureRegistry textureRegistry) {
-    methodCallHandler =
-        new MethodCallHandlerImpl(
-            activity, messenger, new CameraPermissions(), permissionsRegistry, textureRegistry);
+    methodCallHandler = new MethodCallHandlerImpl(
+        activity, messenger, new CameraPermissions(), permissionsRegistry, textureRegistry);
   }
 }
