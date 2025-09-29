@@ -12,12 +12,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.VisibleForTesting;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import io.flutter.plugin.common.PluginRegistry;
 
 final class CameraPermissionsManager {
   interface PermissionsRegistry {
-    @SuppressWarnings("deprecation")
-    void addListener(
-        io.flutter.plugin.common.PluginRegistry.RequestPermissionsResultListener handler);
+    void addListener(PluginRegistry.RequestPermissionsResultListener handler);
   }
 
   interface ResultCallback {
@@ -25,21 +24,21 @@ final class CameraPermissionsManager {
   }
 
   /**
-   * Camera access permission errors handled when camera is created. See {@code MethodChannelCamera}
+   * Camera access permission errors handled when camera is created. See
+   * {@code MethodChannelCamera}
    * in {@code camera/camera_platform_interface} for details.
    */
-  private static final String CAMERA_PERMISSIONS_REQUEST_ONGOING =
-      "CameraPermissionsRequestOngoing";
+  private static final String CAMERA_PERMISSIONS_REQUEST_ONGOING = "CameraPermissionsRequestOngoing";
 
-  private static final String CAMERA_PERMISSIONS_REQUEST_ONGOING_MESSAGE =
-      "Another request is ongoing and multiple requests cannot be handled at once.";
+  private static final String CAMERA_PERMISSIONS_REQUEST_ONGOING_MESSAGE = "Another request is ongoing and multiple requests cannot be handled at once.";
   private static final String CAMERA_ACCESS_DENIED = "CameraAccessDenied";
   private static final String CAMERA_ACCESS_DENIED_MESSAGE = "Camera access permission was denied.";
   private static final String AUDIO_ACCESS_DENIED = "AudioAccessDenied";
   private static final String AUDIO_ACCESS_DENIED_MESSAGE = "Audio access permission was denied.";
 
   private static final int CAMERA_REQUEST_ID = 9796;
-  @VisibleForTesting boolean ongoing = false;
+  @VisibleForTesting
+  boolean ongoing = false;
 
   void requestPermissions(
       Activity activity,
@@ -62,8 +61,8 @@ final class CameraPermissionsManager {
       ActivityCompat.requestPermissions(
           activity,
           enableAudio
-              ? new String[] {Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO}
-              : new String[] {Manifest.permission.CAMERA},
+              ? new String[] { Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO }
+              : new String[] { Manifest.permission.CAMERA },
           CAMERA_REQUEST_ID);
     } else {
       // Permissions already exist. Call the callback with success.
@@ -72,24 +71,20 @@ final class CameraPermissionsManager {
   }
 
   private boolean hasCameraPermission(Activity activity) {
-    return ContextCompat.checkSelfPermission(activity, permission.CAMERA)
-        == PackageManager.PERMISSION_GRANTED;
+    return ContextCompat.checkSelfPermission(activity, permission.CAMERA) == PackageManager.PERMISSION_GRANTED;
   }
 
   private boolean hasAudioPermission(Activity activity) {
-    return ContextCompat.checkSelfPermission(activity, permission.RECORD_AUDIO)
-        == PackageManager.PERMISSION_GRANTED;
+    return ContextCompat.checkSelfPermission(activity, permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED;
   }
 
   @VisibleForTesting
-  @SuppressWarnings("deprecation")
   static final class CameraRequestPermissionsListener
-      implements io.flutter.plugin.common.PluginRegistry.RequestPermissionsResultListener {
+      implements PluginRegistry.RequestPermissionsResultListener {
 
-    // There's no way to unregister permission listeners in the v1 embedding, so we'll be called
-    // duplicate times in cases where the user denies and then grants a permission. Keep track of if
-    // we've responded before and bail out of handling the callback manually if this is a repeat
-    // call.
+    // Keep track of if we've responded before and bail out of handling the callback
+    // manually if this is a repeat
+    // call to avoid duplicate responses.
     boolean alreadyCalled = false;
 
     final ResultCallback callback;
@@ -107,7 +102,8 @@ final class CameraPermissionsManager {
       }
 
       alreadyCalled = true;
-      // grantResults could be empty if the permissions request with the user is interrupted
+      // grantResults could be empty if the permissions request with the user is
+      // interrupted
       // https://developer.android.com/reference/android/app/Activity#onRequestPermissionsResult(int,%20java.lang.String[],%20int[])
       if (grantResults.length == 0 || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
         callback.onResult(CAMERA_ACCESS_DENIED, CAMERA_ACCESS_DENIED_MESSAGE);
