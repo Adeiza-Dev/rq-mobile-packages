@@ -13,7 +13,7 @@ import dev.steenbakker.mobile_scanner.objects.DetectionSpeed
 import io.flutter.plugin.common.BinaryMessenger
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
-import io.flutter.plugin.common.PluginRegistry.RequestPermissionsResultListener
+import io.flutter.plugin.common.PluginRegistry
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding
 import io.flutter.view.TextureRegistry
 import java.io.File
@@ -23,7 +23,7 @@ class MobileScannerHandler(
     private val barcodeHandler: BarcodeHandler,
     binaryMessenger: BinaryMessenger,
     private val permissions: MobileScannerPermissions,
-    private val addPermissionListener: (RequestPermissionsResultListener) -> Unit,
+    private val addPermissionListener: (PluginRegistry.RequestPermissionsResultListener) -> Unit,
     textureRegistry: TextureRegistry): MethodChannel.MethodCallHandler {
 
     private val analyzeImageErrorCallback: AnalyzerErrorCallback = {

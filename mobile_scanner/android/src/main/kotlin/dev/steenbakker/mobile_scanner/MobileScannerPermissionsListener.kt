@@ -9,10 +9,8 @@ import io.flutter.plugin.common.PluginRegistry
 internal class MobileScannerPermissionsListener(
     private val resultCallback: MobileScannerPermissions.ResultCallback,
 ): PluginRegistry.RequestPermissionsResultListener {
-    // There's no way to unregister permission listeners in the v1 embedding, so we'll be called
-    // duplicate times in cases where the user denies and then grants a permission. Keep track of if
-    // we've responded before and bail out of handling the callback manually if this is a repeat
-    // call.
+    // Keep track of if we've responded before and bail out of handling the callback manually if this is a repeat
+    // call to avoid duplicate responses.
     private var alreadyCalled: Boolean = false
 
     override fun onRequestPermissionsResult(

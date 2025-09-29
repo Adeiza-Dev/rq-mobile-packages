@@ -5,7 +5,7 @@ import android.app.Activity
 import android.content.pm.PackageManager
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import io.flutter.plugin.common.PluginRegistry.RequestPermissionsResultListener
+import io.flutter.plugin.common.PluginRegistry
 
 /**
  * This class handles the camera permissions for the Mobile Scanner.
@@ -28,9 +28,9 @@ class MobileScannerPermissions {
         fun onResult(errorCode: String?, errorDescription: String?)
     }
 
-    private var listener: RequestPermissionsResultListener? = null
+    private var listener: PluginRegistry.RequestPermissionsResultListener? = null
 
-    fun getPermissionListener(): RequestPermissionsResultListener? {
+    fun getPermissionListener(): PluginRegistry.RequestPermissionsResultListener? {
         return listener
     }
 
@@ -50,7 +50,7 @@ class MobileScannerPermissions {
     }
 
     fun requestPermission(activity: Activity,
-                          addPermissionListener: (RequestPermissionsResultListener) -> Unit,
+                          addPermissionListener: (PluginRegistry.RequestPermissionsResultListener) -> Unit,
                           callback: ResultCallback) {
         if (ongoing) {
             callback.onResult(
